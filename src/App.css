@@ -1,0 +1,93 @@
+main {
+    height: 600px;
+    width: 500px;
+}
+
+.tenzies-container {
+    height: 100%;
+    width: 100%;
+    padding: 0rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    user-select: none;
+    position: relative;
+    border: 2px solid #fff;
+    border-radius: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+.tenzies-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background-image: url("backgrounds/bg-img.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 1rem;
+    filter: brightness(70%);
+}
+
+.tenzies-container .head-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.head-section h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-family: "Press Start 2P", system-ui;
+    color: #fff;
+    text-shadow: 0 8px 16px rgba(0, 0, 0, 1);
+}
+
+.head-section p {
+    text-align: justify;
+    font-family: "Potta One", system-ui;
+    letter-spacing: -1px;
+    color: #fff;
+    text-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+.tenzies-container .mid-section {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem 2rem;
+}
+
+.bottom-section button {
+    font-size: 1.3rem;
+    padding: .7rem 2rem;
+    font-family: "Press Start 2P", system-ui;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+    cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0, pointer;
+}
+
+button:active {
+    box-shadow: inset 8px 8px 4px rgba(0, 0, 0, 0.4);
+}
+
+.tenzies-container .stats-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+}
+
+.stats-container p {
+    color: #fff;
+    font-family: "Potta One", system-ui;
+}
