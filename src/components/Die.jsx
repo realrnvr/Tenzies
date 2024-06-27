@@ -12,7 +12,7 @@ function Die(props) {
           props.countMoves();
         }}
       >
-        <img src={`dices/d${props.value}.png`} alt="Dice image" />
+        <img src={`/d${props.value}.png`} alt="Dice image" />
       </div>
     </>
   );
