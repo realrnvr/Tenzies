@@ -27,7 +27,7 @@ main {
     bottom: 0;
     right: 0;
     z-index: -1;
-    background-image: url("backgrounds/bg-img.png");
+    background-image: url("/bg-img.png");
     background-size: cover;
     background-position: center;
     border-radius: 1rem;
