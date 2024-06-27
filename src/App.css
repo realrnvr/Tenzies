@@ -1,18 +1,15 @@
 main {
-    height: 600px;
-    width: 500px;
+    width: min(500px, 100% - 2rem);
+    margin-inline: auto;
 }
 
 .tenzies-container {
-    height: 100%;
-    width: 100%;
-    padding: 0rem 1.5rem;
+    padding: 1rem 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     user-select: none;
-    position: relative;
     border: 2px solid #fff;
     border-radius: 1rem;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
@@ -90,4 +87,74 @@ button:active {
 .stats-container p {
     color: #fff;
     font-family: "Potta One", system-ui;
+}
+
+
+@media (max-width: 550px) {
+    .head-section h1 {
+        font-size: 2.7rem;
+    }
+
+    .head-section p {
+        font-size: 1rem;
+    }
+
+    .bottom-section button {
+        font-size: 1.1rem;
+    }
+
+    .stats-container p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .head-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .head-section p {
+        font-size: 0.8rem;
+    }
+
+    .bottom-section button {
+        font-size: 0.9rem;
+    }
+
+    .stats-container p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .head-section h1 {
+        font-size: 2.2rem;
+    }
+
+    .head-section p {
+        font-size: 0.7rem;
+    }
+
+    .bottom-section button {
+        font-size: 0.8rem;
+    }
+
+    .stats-container p {
+        font-size: 0.7rem;
+    }
+
+    main {
+        width: calc(100% - 1rem);
+
+
+    }
+
+    .tenzies-container {
+        border: 0;
+        border-radius: 1em;
+    }
+
+    .tenzies-container::before {
+        border-radius: 1em;
+    }
 }

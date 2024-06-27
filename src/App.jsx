@@ -151,7 +151,7 @@ function App() {
       <main>
         {tenzies && <Confetti width={resize} />}
         <div className="tenzies-container">
-          <div className="head-section">
+          <div className="head-section | mg-top ">
             <h1>tenzies</h1>
             <p>
               Tenzies is a quick and lively dice game where players roll ten
@@ -160,14 +160,14 @@ function App() {
             </p>
           </div>
           <div className="stats-container">
-            <div className="best-complexity">
+            <div className="best-complexity | mg-top ">
               <p>Best Moves: {bestMove() || roll}</p>
               <p>
                 Best Time: {bestMoveTime() || sec} Second
                 {sec || bestMoveTime() > 1 ? "s" : ""}
               </p>
             </div>
-            <div className="current-complexity">
+            <div className="current-complexity | mg-top ">
               <p>Current Moves: {tenzies ? giveCurrentMove() : roll}</p>
               <p>
                 Current Time: {tenzies ? giveCurrentTime() : sec} Second
@@ -175,8 +175,8 @@ function App() {
               </p>
             </div>
           </div>
-          <div className="mid-section">{dieEl}</div>
-          <div className="bottom-section">
+          <div className="mid-section | pd-200 ">{dieEl}</div>
+          <div className="bottom-section | mg-top ">
             <button
               onClick={() => {
                 refreshDice();
